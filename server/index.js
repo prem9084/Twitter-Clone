@@ -23,6 +23,10 @@ app.use("/users", userRouter);
 app.use("/auth", authRouter);
 app.use("/tweets", tweetRouter);
 
+app.get("/", (req, res) => {
+  res.send("API working");
+});
+
 app.listen(8000, () => {
   console.log("Server is listning on Post 8000");
 });
